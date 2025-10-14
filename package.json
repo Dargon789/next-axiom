@@ -1,7 +1,7 @@
 {
   "name": "next-axiom",
   "description": "Send WebVitals from your Next.js project to Axiom.",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "author": "Axiom, Inc.",
   "license": "MIT",
   "contributors": [
