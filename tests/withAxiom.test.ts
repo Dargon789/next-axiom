@@ -103,15 +103,13 @@ test('withAxiom(NextConfigFn) preserves existing rewrites', async () => {
 
   const configFn = (phase: string, { defaultConfig }: { defaultConfig: any }) => {
     return {
-      rewrites: async () => [
-        { source: '/old', destination: '/new' },
-      ],
+      rewrites: async () => [{ source: '/old', destination: '/new' }],
     };
   };
 
   const wrappedConfigFn = withAxiom(configFn);
   const result = await wrappedConfigFn('phase-development-server', { defaultConfig: {} });
-  
+
   const rewrites = await result.rewrites!();
   // When original rewrites returns an array, axiom rewrites are concatenated
   expect(Array.isArray(rewrites)).toBe(true);
