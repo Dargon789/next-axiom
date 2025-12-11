@@ -3,7 +3,7 @@ import { useEffect, useRef, useCallback } from 'react';
 import styles from '../page.module.css';
 
 export default function WorkerPage() {
-  const workerRef = useRef<Worker>();
+  const workerRef = useRef<Worker | null>(null);
 
   useEffect(() => {
     workerRef.current = new Worker(new URL('../../worker.ts', import.meta.url));
