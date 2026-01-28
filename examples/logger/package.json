@@ -10,7 +10,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "next": "^14.2.33",
+    "next": "^15.5.10",
     "next-axiom": "workspace:*",
     "react": "19.2.1",
     "react-dom": "19.2.1"
